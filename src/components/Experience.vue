@@ -75,7 +75,7 @@ export default {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(20%, 1fr));
         grid-auto-rows: 1fr;
-        grid-gap: 20px;
+        grid-gap: 50px;
         justify-content: space-evenly;
     }
     .card{
@@ -83,6 +83,7 @@ export default {
         width: 200px;
         height: 250px;
         border-radius: 20px;
+        margin-bottom: 20px;
         box-shadow: 0px 0px 10px var(--primary_color);
         background-color: var(--primary_color);
         transition: box-shadow 0.2s linear,

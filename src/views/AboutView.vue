@@ -16,10 +16,10 @@ export default {
   
 }
 </script>
-<style>
+<style scoped>
   .main-about{
     width: 100%;
-    height: 95vh;
+    min-height: 95vh;
     background-color: var(--primary_color);
     display: flex;
     flex-wrap: wrap;
@@ -28,7 +28,6 @@ export default {
   .content-img{
     position: relative;
     width: 50%;
-    height: 95vh;
     overflow: hidden;
   }
   .content-img img{
@@ -39,7 +38,8 @@ export default {
   }
   .content-txt{
     width: 50%;
-    height: 95vh;
+    height: 100%;
+    overflow: auto;
   }
   .content-txt h4{
     margin: 0px;
@@ -61,6 +61,7 @@ export default {
     color:var(--whoto_color);
     font-size: 23px;
     margin-top: 15px;
+    text-align: justify;
   }
 
   @media screen and (max-width: 800px) {
