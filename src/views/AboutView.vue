@@ -35,6 +35,7 @@ export default {
     top: -40px;
     right: -40%;
     width: 100%;
+    height: 100%;
   }
   .content-txt{
     width: 50%;

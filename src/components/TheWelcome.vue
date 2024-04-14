@@ -177,7 +177,6 @@ export default {
     mask-image: linear-gradient(black 50%, transparent);
   }
   .main-img-perfil img{
-    user-drag: none;
     -moz-user-select: none;
     -webkit-user-drag: none;
     -webkit-user-select: none;
