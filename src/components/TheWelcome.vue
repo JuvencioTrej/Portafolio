@@ -52,11 +52,9 @@ export default {
       const yRotation = (
         (layerX - width / 2) / width 
       ) * 20
-      console.log(yRotation)
       const xRotation = (
         (layerY - height / 2) / height 
       ) * 20
-      console.log(xRotation)
       const string = `
         perspective(500px)
         scale(1.1)
