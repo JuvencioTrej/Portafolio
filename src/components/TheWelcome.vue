@@ -9,7 +9,7 @@
 
       <!-- btn links -->
       <div class="btn-links-div">
-          <button class="btn-link">
+          <button @click="abrirGit" class="btn-link">
             <i class="fa-brands fa-github-alt"></i>
           </button>
           <button @click="abrirLinkedIn" class="btn-link">
@@ -79,6 +79,9 @@ export default {
     abrirLinkedIn() {
       window.open('https://www.linkedin.com/in/juvencio-trejo-8585a72ba', '_blank');
     },
+    abrirGit() {
+      window.open('https://github.com/JuvencioTrej/Portafolio.git', '_blank');
+    },
     iniciarAnimacion() {
       // Restablecer textoVisible al valor inicial de la primera frase
       this.textoVisible = this.textos[0].slice(0, 0);
@@ -92,7 +95,6 @@ export default {
         } else {
           // Borrar letra y cambiar de frase si es necesario
           setTimeout(() => {
-            console.log(this.textoVisible);
             if (this.textoVisible.length > 0) {
               this.textoVisible = this.textoVisible.slice(0, -1);
             } else {
@@ -103,7 +105,7 @@ export default {
             }
           }, 100); // Tiempo de espera antes de borrar la letra
         }
-      }, 200); // Velocidad de escritura
+      }, 300); // Velocidad de escritura
     }
   },
   beforeUnmount() {
@@ -128,6 +130,7 @@ export default {
   }
   .span-codigo{
     min-height: 40px; /* Tamaño mínimo del contenedor */
+    user-select: none;
     margin: 0px;
     font-weight: normal;
     font-size: 32px;
@@ -136,11 +139,6 @@ export default {
     display: inline-block;
     white-space: nowrap;
     overflow: hidden;
-  }
-  /* Ajusta la animación según lo necesites */
-  .span-codigo-enter,
-  .span-codigo-leave-to {
-    opacity: 0;
   }
   .span-nombre{
     margin: 0px;
@@ -162,9 +160,9 @@ export default {
   /* imagen portada */
   .main-img-perfil{
     position: absolute;
-    right: 100px;
+    right: 230px;
     top: 160px;
-    width: 500px;
+    width: 400px;
     height: 400px;
     overflow: hidden;
     transition: box-shadow 0.2s, transform 0.2s;
@@ -174,7 +172,7 @@ export default {
   }
   .div-fondo-cuadro{
     position: absolute;
-    width: 500px;
+    width: 400px;
     height: 400px;
     top: 0px;
     background-color: var(--fourth_color);
@@ -210,5 +208,75 @@ export default {
   .btn-link:hover{
     color: var(--whoto_color);
     filter: drop-shadow(0 0 5px var(--whoto_color));
+  }
+
+  @media screen and (max-width: 800px) {
+    /* text portada */
+    .main-text-portada{
+      overflow: hidden;
+      position: relative; 
+      width: 80%;
+      top: 20px;
+      left: 10%;
+    }
+    .span-codigo{
+      min-height: 12px;
+      font-size: 12px;
+      width: 100%;
+      text-align: center;
+    }
+    .span-nombre{
+      margin-top: 10px;
+      font-size: 18px;
+      text-align: center;
+    }
+    .span-job{
+      margin-top: 10px;
+      font-size: 20px;
+      text-align: center;
+    }
+    /* imagen portada */
+    .main-img-perfil{
+      position: relative;
+      overflow: hidden;
+      top: 25px;
+      left: 10%;
+      right: 0px;
+      width: 80%;
+    }
+    .div-fondo-cuadro{
+      position: absolute;
+      width: 100%;
+      height: 400px;
+      top: 0px;
+    }
+    .main-img-perfil img{
+      width: 400px;
+      mask-image: linear-gradient(black 50%, transparent);
+    }
+    .btn-links-div{
+      position: relative;
+      width: 100%;
+      height: 100px;
+      margin-top: 10px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+    }
+    .btn-link{
+      cursor: pointer;
+      margin-left: 10px;
+      background-color: transparent;
+      border: 0px;
+      padding: 10px 20px;
+      color: var( --third_color);
+      font-size: 50px;
+      transition: color 0.5s linear,
+                  filter 0.5s linear;
+    }
+    .btn-link:hover{
+      color: var(--whoto_color);
+      filter: drop-shadow(0 0 5px var(--whoto_color));
+    }
   }
 </style>

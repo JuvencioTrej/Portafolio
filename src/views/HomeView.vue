@@ -8,4 +8,4 @@ import Experience from '@/components/Experience.vue';
     <TheWelcome />
     <Experience />
   </main>
-</template>../components/TheWelcome2.vue
+</template>

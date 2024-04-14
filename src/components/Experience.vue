@@ -129,4 +129,31 @@ export default {
     .card:hover p{
         color: var(--primary_color);
     }
+
+    @media screen and (max-width: 800px) {
+        .main-experience{
+            position: absolute;
+            height: 160vh;
+            overflow: hidden;
+        }
+        .content-card {
+            grid-template-columns: repeat(2, 1fr); /* Dos elementos por fila */
+        }
+        .card{
+            width: 150px;
+            height: auto;
+            padding-bottom: 20px;
+        }
+        .card i {
+            font-size: 50px;
+            margin-top: 20px;
+        }
+        .card h2{
+           font-size: 20px;
+           margin-bottom: 10px;
+        }
+        .card p{
+            font-size: 14px;
+        } 
+    }
 </style>

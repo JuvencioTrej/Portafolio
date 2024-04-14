@@ -22,9 +22,9 @@ import { RouterLink, RouterView } from 'vue-router'
           </RouterLink>
         </div>
         <div class="option-navegation">
-          <RouterLink to="/about">
+          <RouterLink to="/contact">
             <h5 class="text-option">Contact</h5>
-            <div v-if="$route.path == '/about'" class="select-bar"></div>
+            <div v-if="$route.path == '/contact'" class="select-bar"></div>
           </RouterLink>
         </div>
       </nav>
@@ -74,5 +74,11 @@ import { RouterLink, RouterView } from 'vue-router'
   height: 5px;
   border-radius: 10px;
   background-color: var(--fourth_color);
+}
+/* Oculta el menú de navegación en dispositivos con ancho de pantalla menor que 800px */
+@media screen and (max-width: 800px) {
+  .main-nav-bar {
+    display: none;
+  }
 }
 </style>
