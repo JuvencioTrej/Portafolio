@@ -62,4 +62,44 @@ export default {
     font-size: 23px;
     margin-top: 15px;
   }
+
+  @media screen and (max-width: 800px) {
+    .main-about{
+      display: block;
+      height: 200vh;
+      font-family: "Raleway", sans-serif;
+    }
+    .content-img{
+      position: relative;
+      width: 100%;
+      height: auto;
+      overflow: hidden;
+    }
+    .content-img img{
+      position: relative;
+      top: 0px;
+      right: 0px;
+    }
+    .content-txt{
+      width: 100%;
+      height: auto;
+      text-align: center;
+    }
+    .content-txt h4{
+      width: 90%;
+      margin-left: 5%;
+      font-size: 25px;
+      margin-top: 30px;
+    }
+    .content-txt h5{
+      font-size: 20px;
+    }
+    .content-txt p{
+      width: 90%;
+      margin-left: 5%;
+      font-size: 20px;
+      margin-top: 20px;
+    }
+  }
+
 </style>
