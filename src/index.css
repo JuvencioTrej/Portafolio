@@ -1,0 +1,24 @@
+
+/* Colores */
+:root {
+    --gold-accent: #D4AF37; /* Dorado elegante para destacar */
+    --misty-gray: #B0B0B0; /* Gris brumoso para texto secundario */
+    --deep-green: #2C5E3E; /* Verde oscuro para botones y elementos */
+    --soft-white: #F5F5F5; /* Blanco suave para texto legible */
+    --matte-black: #212121; /* Negro mate para contrastes */
+}
+
+/* Reseteo de estilos */
+body{
+    margin: 0px;
+    font-family: "Inconsolata", serif;
+}
+
+h1, h2, h3, h4, h5 {
+    margin: 0px;
+    font-weight: normal;
+}
+
+p{
+    margin: 0px;
+}
