@@ -4,8 +4,8 @@ import Head from './components/Head.jsx'
 const App = () => {
 
   return (
-    <> 
-      <Head />
+    <>
+      <Head name='Juvencio Trejo'/>
     </>
   )
 }
